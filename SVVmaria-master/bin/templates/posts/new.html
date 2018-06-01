@@ -1,0 +1,63 @@
+<html layout:decorator="layout">
+
+   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <div layout:fragment="content">
+        <form method="post" name="nombre_form" id="nombre_form" action="/posts/create" role="form">
+            
+          <div class="form-group">
+                <label for="message">Nombre</label>
+                <textarea rows="5" class="form-control" id="nombre" name="nombre"/>
+            </div>  
+        
+        <form method="post" name="correo_form" id="correo_form" action="/posts/create" role="form">
+            
+          <div class="form-group">
+                <label for="message">Correo</label>
+                <textarea rows="5" class="form-control" id="correo" name="correo"/>
+            </div>  
+        
+       
+        <form method="post" name="pass_form" id="pass_form" action="/posts/create" role="form">
+            
+          <div class="form-group">
+                <label for="message">Password</label>
+                <textarea rows="5" class="form-control" id="pass" name="pass"/>
+            </div>  
+        
+        
+        <form method="post" name="ciudad_form" id="ciudad_form" action="/posts/create" role="form">
+            
+          <div class="form-group">
+                <label for="message">Ciudad</label>
+                <textarea rows="5" class="form-control" id="ciudad" name="ciudad"/>
+            </div>  
+      <form method="post" name="imagen_form" id="imagen_form" action="/posts/create" role="form">
+            
+            <div class="form-group">
+            <!--  <input type="file" onchange="previewFile()"></input> 
+           -->
+            <br></br>
+            
+            <!--  <img id="hel" src="" height="200" alt="Vista previa..."></img>
+         -->
+                <label for="message">Imagen</label>
+                <textarea  rows="5" class="form-control" id="imagen" name="imagen"></textarea>
+                <input type="file" onchange="previewFile()"   />
+                <img id="hel" src="" height="200" alt="Vista previa..."   ></img>
+         
+            </div>
+            
+                                    <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        </form>                            
+        </form>
+        </form>
+        </form>
+        </form>
+    </div>
+    
+    
+
+    
+</html>

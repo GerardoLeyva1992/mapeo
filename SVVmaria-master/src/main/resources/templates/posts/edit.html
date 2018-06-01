@@ -1,0 +1,25 @@
+<html layout:decorator="layout">
+    <div layout:fragment="content">
+        <form method="post" name="comment_form" id="comment_form" action="/posts/update" role="form">
+            <div class="form-group">
+                   <!--  <input type="file" onchange="previewFile()"></input> 
+           -->
+            <br></br>
+            
+            <!--  <img id="hel" src="" height="200" alt="Vista previa..."></img>
+         -->
+                <label for="message">Aeropuerto</label>
+                <textarea  rows="5" class="form-control" id="nombreaeropuerto" name="nombreaeropuerto"></textarea>
+                <input type="file" onchange="previewFile()"   />
+                <img id="hel" src="" height="200" alt="Vista previa..."   ></img>
+         
+            </div>
+              
+            
+            <input type="hidden" id="post_idaeropuerto" rows="5" class="form-control" name="post_idaeropuerto" th:value="${post.idaeropuerto}"/>
+            <input type="hidden" id="post_idaeropuerto" rows="5" class="form-control" name="post_idaeropuerto" th:value="${post.nombreaeropuerto}"/>
+            
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</html>

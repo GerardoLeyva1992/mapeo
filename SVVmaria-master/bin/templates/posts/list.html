@@ -1,0 +1,43 @@
+<html layout:decorator="layout">
+
+<div layout:fragment="content">
+
+    <a class="btn btn-primary" href="/posts/new">Agregar nueva imagen</a>
+
+    <table class="table table-striped" id="posts_list">
+        <thead>
+        <tr>
+            <th>Aeropuerto</th>
+            <th>Borrar o Editar</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <h1>Imagenes</h1>
+        <tr data-th-each="post : ${posts}">
+            <img  th:src="${post.nombreaeropuerto}" height="200"></img>
+         
+
+            <td>
+                <a th:href="@{'/posts/{idaeropuerto}/edit'(idaeropuerto=${post.idaeropuerto})}" class="edit" th:attr="name=${post.nombreaeropuerto}">
+                    <span class="fa-stack">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </span>
+
+                </a>
+ 
+                
+            </td>
+               <td>
+                <a th:href="@{'/posts/{idaeropuerto}/delete'(idaeropuerto=${post.idaeropuerto})}" class="delete" th:attr="name=${post.nombreaeropuerto}">
+                        <span class="fa-stack">
+                            <i class="glyphicon glyphicon-trash"></i> 
+                        </span>
+                </a>
+            </td>
+        </tr>
+           
+        </tbody>
+    </table>
+</div>
+</html>
