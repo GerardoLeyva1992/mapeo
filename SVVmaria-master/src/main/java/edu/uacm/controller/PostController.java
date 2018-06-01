@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import edu.uacm.domain.Usuario;
-import edu.uacm.domain.UsuarioRepo;
 
 @Controller
 @RequestMapping("/posts")
@@ -26,10 +25,9 @@ public class PostController {
 
 	
 
-    private UsuarioRepo repository;
     @PersistenceContext
     private EntityManager em;
-
+/*
     @RequestMapping(value="", method=RequestMethod.GET)
     public String listPosts(Model model) {
         model.addAttribute("posts", repository.findAll());
@@ -46,6 +44,7 @@ public class PostController {
     public String newProject() {
         return "posts/new";
     }
+    */
     @Transactional
 	@Rollback(false)
     @RequestMapping(value = "/create", method = RequestMethod.POST)
