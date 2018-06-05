@@ -1,8 +1,7 @@
 package edu.uacm.domain;
 
 
-import java.sql.Date;
-import java.sql.Time;
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +27,6 @@ public class Post {
 	
 	private Date fechaDePublicacion;
 	
-	private Time horaPublicacion;
 	
 	@OneToMany 
 	private List<Comentario> comentarios=  new ArrayList<>();
@@ -92,14 +90,6 @@ public class Post {
 		this.fechaDePublicacion = fechaDePublicacion;
 	}
 
-	public Time getHoraPublicacion() {
-		return horaPublicacion;
-	}
 
-	public void setHoraPublicacion(Time horaPublicacion) {
-		this.horaPublicacion = horaPublicacion;
-	}
-	
-	
 	
 }
